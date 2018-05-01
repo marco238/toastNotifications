@@ -1,22 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SimpleNotificationsModule } from 'angular2-notifications';
-
 
 import { AppComponent } from './app.component';
+import { ExampleComponent } from './example.component';
 
+import { SimpleNotificationsModule } from 'angular2-notifications';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
-    SimpleNotificationsModule.forRoot(),
+    ReactiveFormsModule,
     BrowserAnimationsModule,
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    SimpleNotificationsModule.forRoot()
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [ AppComponent, ExampleComponent ],
+  bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
